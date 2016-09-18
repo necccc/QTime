@@ -1,0 +1,10 @@
+<div class="mdl-layout__drawer">
+    <span class="mdl-layout-title">QTime</span>
+    <nav class="mdl-navigation">
+        <a class="mdl-navigation__link" href="/">Time</a>
+        <a class="mdl-navigation__link" href="/network.html">Network</a>
+        <a class="mdl-navigation__link" href="/clockface.html">Clockface</a>
+        <a class="mdl-navigation__link" href="/advanced.html">Advanced</a>
+    </nav>
+</div>
+

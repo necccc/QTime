@@ -4,12 +4,37 @@
   "description": "Tessel project",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "tessel erase; npm run build:server; npm run copy:json; cd build/; npm i --only=prod; tessel push .",
+    "dev:local": "npm run build:server; cd build/; export QTEST=1;node index.js",
+    "dev:tessel": "npm run build:server; npm run copy:json; cd build/;  npm i --only=prod; tessel run .",
+    "copy:json": "cp package.json build/",
+    "build:static": "node_modules/docpad/bin/docpad generate",
+    "build:server": "node_modules/grunt/bin/grunt build"
   },
   "repository": "https://github.com/necccc/QTime.git",
   "keywords": [
     "Tessel"
   ],
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "docpad": "6.75.2",
+    "docpad-plugin-eco": "2.1.0",
+    "docpad-plugin-partials": "2.9.2",
+    "grunt": "^1.0.1",
+    "grunt-contrib-uglify": "^2.0.0",
+    "ws": "^1.1.1"
+  },
   "license": "MIT",
-  "readme": "A bare bones Tessel 2 blinky script."
+  "readme": "A bare bones Tessel 2 blinky script.",
+  "qtime": {
+    "network": {
+      "mode": "ap",
+      "password": "",
+      "name": ""
+    },
+    "display": {}
+  }
 }

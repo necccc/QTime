@@ -1,0 +1,4 @@
+<div id="footer">
+  <a href="<%- @getPath('about.html','/') %>">About</a>
+</div>
+<!-- test -->
